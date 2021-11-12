@@ -33,60 +33,52 @@ export class App extends Component {
     });
   }
   render() {
-    return <div className="loader">
-           <div className="d-flex justify-content-center">
-           <div className="loader-circle"></div>
-             <InfinityLoader/>
+     const {loading} = this.state
+     if(loading) {
+      return <div className="loader">
+              <div className="d-flex justify-content-center">
+              <div className="loader-circle"></div>
+                <InfinityLoader/>
+              </div>
+             </div>
+     } else {
+       return (
+         <div className="main">
+           <div className="section">
+             <div className="profile-image-wrapper">
+               {/* <img src={this.state.data.imageUrl} alt="profile" className="profile-image d-flex justify-content-center"/> */}
+               <LazyLoadImage effect="blur" src={this.state.imaegUrl} className="profile-image d-flex justify-content-center" alt="profile"/>
+             </div>
+             <div className="profile-name d-flex justify-content-center">{this.state.data.name}</div>
+             {this.state.data.btnsName.map(btnName => {
+               console.log(btnName)
+               return <div className="links d-grid" key={btnName.id}>
+                 <a href="/" className="btn mx-auto">{btnName}</a>
+               </div>
+             })}
+             {/* <div className="links d-grid">
+                 <a href="/" className="btn mx-auto">Source Code</a>
+                 <a href="/" className="btn mx-auto">Youtube</a>
+                 <a href="/" className="btn mx-auto">Instagram</a>
+                 <a href="/" className="btn mx-auto">Medium</a>
+             </div> */}
+             <div className="logo d-flex justify-content-center">
+               <div className="row loader-wrapper">
+                 <div className="logo-image col">
+                   {/* <img src={this.state.data.logoImageUrl} alt="logo"/> */}
+                   <LazyLoadImage effect="blur" src={this.state.logoImageUrl}alt="logo"/>
+                 </div>
+                 <div className="logo-text col">Infinity Links</div>
+               </div>
+             </div>
            </div>
+           {/* <div className="chat-bot">
+             <ChatBot/>
+           </div> */}
          </div>
-  }
-  //   const {loading} = this.state
-  //   if(loading) {
-  //     return <div className="loader">
-  //         <div className="d-flex justify-content-center">
-  //           <div className="loader-circle"></div>
-  //           <InfinityLoader/>
-  //         </div>
-  //         <ParticleBackground/>
-  //       </div>
-  //   } else {
-  //     return (
-  //       <div className="main">
-  //         <div className="section">
-  //           <div className="profile-image-wrapper">
-  //             {/* <img src={this.state.data.imageUrl} alt="profile" className="profile-image d-flex justify-content-center"/> */}
-  //             <LazyLoadImage effect="blur" src={this.state.imaegUrl} className="profile-image d-flex justify-content-center" alt="profile"/>
-  //           </div>
-  //           <div className="profile-name d-flex justify-content-center">{this.state.data.name}</div>
-  //           {this.state.data.btnsName.map(btnName => {
-  //             console.log(btnName)
-  //             return <div className="links d-grid" key={btnName.id}>
-  //               <a href="/" className="btn mx-auto">{btnName}</a>
-  //             </div>
-  //           })}
-  //           {/* <div className="links d-grid">
-  //               <a href="/" className="btn mx-auto">Source Code</a>
-  //               <a href="/" className="btn mx-auto">Youtube</a>
-  //               <a href="/" className="btn mx-auto">Instagram</a>
-  //               <a href="/" className="btn mx-auto">Medium</a>
-  //           </div> */}
-  //           <div className="logo d-flex justify-content-center">
-  //             <div className="row loader-wrapper">
-  //               <div className="logo-image col">
-  //                 {/* <img src={this.state.data.logoImageUrl} alt="logo"/> */}
-  //                 <LazyLoadImage effect="blur" src={this.state.logoImageUrl}alt="logo"/>
-  //               </div>
-  //               <div className="logo-text col">Infinity Links</div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //         {/* <div className="chat-bot">
-  //           <ChatBot/>
-  //         </div> */}
-  //       </div>
-  //     )
-  //   }
-  // }
+       )
+     }
+   }
 }
 function demoAsyncCall() {
   return new Promise((resolve) => setTimeout(() => resolve(), 2500));
