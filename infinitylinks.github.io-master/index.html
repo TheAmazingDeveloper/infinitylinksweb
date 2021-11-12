@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Clear Cache -->
+    <?php Header("Cache-Control: max-age=3000, must-revalidate"); ?>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    
+    <!-- Address Bar Color -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#1a2837">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#1a2837">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1a2837">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="https://theamazingdeveloper.github.io/infinitylinks.github.io/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://theamazingdeveloper.github.io/infinitylinks.github.io/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="https://theamazingdeveloper.github.io/infinitylinks.github.io/assets/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://theamazingdeveloper.github.io/infinitylinks.github.io/assets/images/favicon-16x16.png" sizes="16x16" />
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://theamazingdeveloper.github.io/infinitylinks.github.io/css/style.css?v=1.01">
+
+    <!-- Title -->
+    <title>Amazing Developer</title>
+</head>
+<body>
+    <div class="loader">
+        <div id="particles-background" class="vertical-centered-box"></div>
+        <div id="particles-foreground" class="vertical-centered-box"></div>
+        
+        <div class="vertical-centered-box">
+            <div class="content">
+                <div class="loader-circle"></div>
+                <div class="loader-line"></div>
+                <svg width="300px" height="200px" viewBox="0 0 187.3 93.7" preserveAspectRatio="xMidYMid meet" style="left: 50%; top: 50%; position: absolute; transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);">
+                    <path stroke="#ededed" id="outline" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 
+                        d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+                    <path id="outline-bg" opacity="0.05" fill="none" stroke="#ededed" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 
+                        d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="section">
+            <div class="profile-image-wrapper">
+                <img src="https://theamazingdeveloper.github.io/infinitylinks.github.io/assets/images/profile.png" alt="profile-image" class="profile-image">
+            </div>
+            <div class="profile-name">
+                @Amazing Developer
+            </div>
+            <div class="links">
+                <a href="#" class="btn">Source Code</a>
+                <a href="#" class="btn">Youtube</a>
+                <a href="#" class="btn">Instagram</a>
+                <a href="#" class="btn">Medium</a>
+            </div>
+                <div class="logo">
+                    <div class="row">
+                        <div class="logo-image">
+                            <img src="https://theamazingdeveloper.github.io/infinitylinks.github.io/assets/images/logo.png" alt="logo-image">
+                        </div>
+                        <div class="logo-text">
+                            Infinity Links
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> 
+    <script src="https://theamazingdeveloper.github.io/infinitylinks.github.io/javascript/index.js?v=1.01"></script>
+    <script>
+        jQuery(window).on('load', function(){
+        setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+        });
+        function removeLoader(){
+            jQuery(".loader").fadeOut(500, function() {
+            // fadeOut complete. Remove the loading div
+            jQuery(".loader").remove(); //makes page more lightweight 
+        });  
+        }
+      </script>
+</body>
+</html>
