@@ -9,6 +9,8 @@ import { collection, getDocs } from 'firebase/firestore'
 export class App extends Component {
   state = {
     loading: true,
+    imageUrl: "",
+    logoImageUrl: "",
     data: []
   };
   componentDidMount() {
@@ -18,7 +20,16 @@ export class App extends Component {
       const rawData = await getDocs(collectionRef);
       const data = rawData.docs.map(doc => ({...doc.data(), id: doc.id}))
       data.map(user => {
-        this.setState({loading: false, data: user})
+        var image = new Image()
+        image.src = user.imageUrl
+        image.onload = () => {
+        this.setState({imageUrl: image.src})
+        }
+        var secondImage = new Image()
+        secondImage.src = user.logoImageUrl
+        secondImage.onload = () => {
+          this.setState({loading: false, data: user, logoImageUrl: secondImage.src})
+        }
         return null
       })
     });
@@ -37,7 +48,7 @@ export class App extends Component {
          <div className="main">
            <div className="section">
              <div className="profile-image-wrapper">
-               <img src={this.state.data.imageUrl} alt="profile" className="profile-image d-flex justify-content-center"/>
+               <img src={this.state.imageUrl} alt="profile" className="profile-image d-flex justify-content-center"/>
                {/* <LazyLoadImage effect="blur" src={this.state.data.imageUrl} className="profile-image d-flex justify-content-center" alt="profile"/>*/}
                </div>
              <div className="profile-name d-flex justify-content-center">{this.state.data.name}</div>
@@ -56,7 +67,7 @@ export class App extends Component {
                <div className="row loader-wrapper">
                  <div className="logo-image col">
                    {/* <img src={this.state.data.logoImageUrl} alt="logo"/> */}
-                   <LazyLoadImage effect="blur" src={this.state.data.logoImageUrl} alt="logo"/>
+                   <LazyLoadImage effect="blur" src={this.state.logoImageUrl} alt="logo"/>
                  </div>
                  <div className="logo-text col">Infinity Links</div>
                </div>
