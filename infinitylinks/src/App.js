@@ -13,7 +13,7 @@ export class App extends Component {
   };
   componentDidMount() {
     // this simulates an async action, after which the component will render the content
-    demoAsyncCall().then(async () => {
+    window.onload = (async () => {
       const collectionRef = collection(firebaseDb, 'users')
       const rawData = await getDocs(collectionRef);
       const data = rawData.docs.map(doc => ({...doc.data(), id: doc.id}))
@@ -69,9 +69,6 @@ export class App extends Component {
        )
      }
    }
-}
-function demoAsyncCall() {
-  return new Promise((resolve) => setTimeout(() => resolve(), 2500));
 }
 
 export default App
