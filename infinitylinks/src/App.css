@@ -9,7 +9,7 @@
 }
  /* CSS for the whole loader background */
  .loader{
-  background-image: url("./assets/images/loader-background.png");
+  background-image: url("./assets/images/loader-background.webp");
   height: 100%;
   width: 100%;
   padding: 2.5vh 15px;
@@ -86,7 +86,7 @@
 /* ----------- Mobile ----------- */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   .main {
-    background-image: url("./assets/images/glassmorphism-background.png");
+    background-image: url("./assets/images/glassmorphism-background.webp");
     height: 100%;
     width: 100%;
     padding: 2.5vh 15px;
@@ -149,7 +149,7 @@
 /* ----------- Desktop ----------- */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .main {
-    background-image: url("./assets/images/glassmorphism-background.png");
+    background-image: url("./assets/images/glassmorphism-background.webp");
     height: 100%;
     width: 100%;
     padding: 2.5vh 15px;

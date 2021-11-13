@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/infinitylinks/static/css/main.009dd748.chunk.css",
+    "main.css": "/infinitylinks/static/css/main.7405448c.chunk.css",
     "main.js": "/infinitylinks/static/js/main.908003ad.chunk.js",
     "main.js.map": "/infinitylinks/static/js/main.908003ad.chunk.js.map",
     "runtime-main.js": "/infinitylinks/static/js/runtime-main.83648fcf.js",
@@ -12,15 +12,15 @@
     "static/js/3.e5448f9d.chunk.js.map": "/infinitylinks/static/js/3.e5448f9d.chunk.js.map",
     "index.html": "/infinitylinks/index.html",
     "static/css/2.8095601a.chunk.css.map": "/infinitylinks/static/css/2.8095601a.chunk.css.map",
-    "static/css/main.009dd748.chunk.css.map": "/infinitylinks/static/css/main.009dd748.chunk.css.map",
+    "static/css/main.7405448c.chunk.css.map": "/infinitylinks/static/css/main.7405448c.chunk.css.map",
     "static/js/2.46a84f39.chunk.js.LICENSE.txt": "/infinitylinks/static/js/2.46a84f39.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/infinitylinks/static/media/loader-background.2c18a495.png"
+    "static/media/App.css": "/infinitylinks/static/media/loader-background.3d3ba28f.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.83648fcf.js",
     "static/css/2.8095601a.chunk.css",
     "static/js/2.46a84f39.chunk.js",
-    "static/css/main.009dd748.chunk.css",
+    "static/css/main.7405448c.chunk.css",
     "static/js/main.908003ad.chunk.js"
   ]
 }
