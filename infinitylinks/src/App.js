@@ -15,6 +15,17 @@ export class App extends Component {
   };
   componentDidMount() {
     // this simulates an async action, after which the component will render the content
+    if('caches' in window){
+      caches.keys().then((names) => {
+              // Delete all the cache files
+              names.forEach(name => {
+                  caches.delete(name);
+              })
+          });
+  
+          // Makes sure the page reloads. Changes are only visible after you refresh.
+          window.location.reload(true);
+      }
     window.onload = (async () => {
       const collectionRef = collection(firebaseDb, 'users')
       const rawData = await getDocs(collectionRef);
