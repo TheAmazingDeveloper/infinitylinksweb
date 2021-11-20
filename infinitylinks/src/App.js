@@ -55,6 +55,7 @@ export class App extends Component {
              {this.state.data.btnsName.map(btnName => {
                return <div className="links d-grid" key={btnName.id}>
                  <a href="/" className="btn mx-auto">{btnName}</a>
+                 <p>hii</p>
                </div>
              })}
              {/* <div className="links d-grid">
