@@ -84,7 +84,7 @@
 }
 
 /* ----------- Mobile ----------- */
-@media only screen and (max-width: 768px) and (orientation: portrait) {
+@media only screen and (max-width: 800px) and (orientation: portrait) {
   .main {
     background-image: url("./assets/images/glassmorphism-background.webp");
     height: 100%;
