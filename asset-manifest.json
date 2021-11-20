@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/infinitylinks/static/css/main.35a26088.chunk.css",
+    "main.css": "/infinitylinks/static/css/main.9dcd90aa.chunk.css",
     "main.js": "/infinitylinks/static/js/main.bfff3c99.chunk.js",
     "main.js.map": "/infinitylinks/static/js/main.bfff3c99.chunk.js.map",
     "runtime-main.js": "/infinitylinks/static/js/runtime-main.83648fcf.js",
@@ -12,7 +12,7 @@
     "static/js/3.e5448f9d.chunk.js.map": "/infinitylinks/static/js/3.e5448f9d.chunk.js.map",
     "index.html": "/infinitylinks/index.html",
     "static/css/2.8095601a.chunk.css.map": "/infinitylinks/static/css/2.8095601a.chunk.css.map",
-    "static/css/main.35a26088.chunk.css.map": "/infinitylinks/static/css/main.35a26088.chunk.css.map",
+    "static/css/main.9dcd90aa.chunk.css.map": "/infinitylinks/static/css/main.9dcd90aa.chunk.css.map",
     "static/js/2.46a84f39.chunk.js.LICENSE.txt": "/infinitylinks/static/js/2.46a84f39.chunk.js.LICENSE.txt",
     "static/media/App.css": "/infinitylinks/static/media/loader-background.3d3ba28f.webp"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.83648fcf.js",
     "static/css/2.8095601a.chunk.css",
     "static/js/2.46a84f39.chunk.js",
-    "static/css/main.35a26088.chunk.css",
+    "static/css/main.9dcd90aa.chunk.css",
     "static/js/main.bfff3c99.chunk.js"
   ]
 }
